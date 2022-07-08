@@ -7,8 +7,8 @@ WORKDIR /app
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 
-RUN ./mvnw dependency:go-offline
+RUN ./mvn dependency:go-offline
 
 COPY src ./src
 
-CMD ["./mvnw", "exec:java"]
+CMD ["./mvn", "exec:java"]
